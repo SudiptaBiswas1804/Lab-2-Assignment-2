@@ -68,7 +68,7 @@ return length;
 }
 
 //Insertion function - function used for inserting a node at a particular position
-void insertnode(int n1, int pos1){
+void insertnode(int pos1, int n1){
 node *cur,*prev;
 node *temp=new node;
 temp->data=n1;
@@ -123,8 +123,8 @@ l.addnode(4);
 l.addnode(5);
 l.displaynode();
 l.countnode();
-cin>>n1>>pos1;
-l.insertnode(n1,pos1);
+cin>>pos1>>n1;
+l.insertnode(pos1,n1);
 cout<<"The linked list after insertion of the value "<<n1<<" in the "<<pos1<<" position :"<<endl;
 l.displaynode();
 l.deletenode();
