@@ -68,7 +68,7 @@ return length;
 }
 
 //Insertion function - function for inserting a node at a particular position
-void insertnode(int n2, int pos1){
+void insertnode(int pos1, int n2){
 int count=1;
 node *cur=new node;
 node *pr=new node;
@@ -149,10 +149,11 @@ l.addnode(4);
 l.addnode(5);
 l.displaynode();
 l.countnode();
-cin>>n2>>pos1;
-l.insertnode(n2,pos1);
+cin>>pos1>>n2;
+l.insertnode(pos1,n2);
 cout<<"After the insertion of the node at "<<pos1<<" with the value of "<<n2<<" : "<<endl;
-l.displaynode();l.deletenode();
+l.displaynode();
+l.deletenode();
 cout<<"After the deletion of the node at the end : "<<endl;
 l.displaynode();
 cin>>pos2;
